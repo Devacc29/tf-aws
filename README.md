@@ -10,3 +10,4 @@ Add the following secrets and the values
 
 AWS_ACCESS_KEY_ID
 AWS_SECRET_ACCESS_KEY
+BUCKET_TF_STATE
