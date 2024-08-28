@@ -41,12 +41,12 @@ JSON
 }
 
 resource "aws_vpc" "vpc" {
-  arn = "res-vpc-01"
   cidr_block       = "10.0.0.0/16"
   instance_tenancy = "default"
 
   tags = {
     created_by = "deva"
+    name = "res-vpc-01"
   }
 }
 
@@ -56,5 +56,6 @@ resource "aws_subnet" "sub1" {
 
   tags = {
     created_by = "deva"
+    name = "res-vpc-sub-01"
   }
 }
