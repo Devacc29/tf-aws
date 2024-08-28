@@ -1,6 +1,6 @@
 name: "Terraform in AWS with GitHub Actions"
  
-on:
+on: workflow_dispatch
  push:
    branches:
    - main
