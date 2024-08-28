@@ -23,7 +23,7 @@ resource "aws_resourcegroups_group" "rg" {
     query = <<JSON
 {
   "ResourceTypeFilters": [
-    "AWS::EC2::Instance"
+    "AWS::EC2::Instance", "AWS::EC2::Subnet", "AWS::EC2::VPC"
   ],
   "TagFilters": [
     {
