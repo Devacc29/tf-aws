@@ -27,8 +27,8 @@ resource "aws_resourcegroups_group" "rg" {
   ],
   "TagFilters": [
     {
-      "Key": "Stage",
-      "Values": ["Test"]
+      "Key": "created_by",
+      "Values": ["deva"]
     }
   ]
 }
@@ -41,6 +41,7 @@ JSON
 }
 
 resource "aws_vpc" "vpc" {
+  arn = "res-vpc-01"
   cidr_block       = "10.0.0.0/16"
   instance_tenancy = "default"
 
