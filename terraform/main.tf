@@ -17,7 +17,7 @@ provider "aws" {
 }
 
 resource "aws_resourcegroups_group" "rg" {
-  name = "aws-tf-useast-rg-01"
+  name = "res-tf-useast-rg-01"
 
   resource_query {
     query = <<JSON
