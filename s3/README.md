@@ -5,16 +5,16 @@ Save access key and secret key
 
 ### AWS CONFIGURE
 
-Devas-MacBook-Air ~ % aws configure
-AWS Access Key ID [None]: 
-AWS Secret Access Key [None]: 
-Default region name [None]: 
-Default output format [None]: 
+Devas-MacBook-Air ~ % aws configure <br/>
+AWS Access Key ID [None]: <br/>
+AWS Secret Access Key [None]: <br/>
+Default region name [None]: <br/>
+Default output format [None]: <br/>
 
 ### CREATE S3 BUCKET TO STORE TF STATE FILE
-Run the terraform.sh file
+Run the terraform.sh file <br/>
 
-cd to the s3 folder 
-chmod +x terraform.sh
+cd to the s3 folder <br/>
+chmod +x terraform.s <br/>
 ./terraform.sh
 
