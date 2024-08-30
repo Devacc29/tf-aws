@@ -5,7 +5,7 @@ Save access key and secret key
 
 ### AWS CONFIGURE
 
-(base) devamyluru@Devas-MacBook-Air ~ % aws configure
+Devas-MacBook-Air ~ % aws configure
 AWS Access Key ID [None]: 
 AWS Secret Access Key [None]: 
 Default region name [None]: 
