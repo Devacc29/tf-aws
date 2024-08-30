@@ -1,6 +1,5 @@
 name: "TF in AWS with GA"
- 
-on:
+on:  #workflow_dispatch
   push:
     branches:
     - main
