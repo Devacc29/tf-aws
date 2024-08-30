@@ -1,23 +1,5 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 5.0"
-    }
-  }
-  backend "s3" {
-    region = "us-east-1"
-    key = "terraform.tfstate"
-  }
-}
-
-# Configure the AWS Provider
-provider "aws" {
-  region = "us-east-1"
-}
-
 resource "aws_resourcegroups_group" "rg" {
-  name = "res-tf-useast-rg-01"
+  name = "res-tf-useast1-rg-01"
 
   resource_query {
     query = <<JSON
@@ -27,8 +9,8 @@ resource "aws_resourcegroups_group" "rg" {
   ],
   "TagFilters": [
     {
-      "Key": "created_by",
-      "Values": ["deva"]
+      "Key": "created_by", "rg"
+      "Values": ["deva", "res-tf-useast1-rg-01"]
     }
   ]
 }
@@ -37,6 +19,7 @@ JSON
 
   tags = {
     created_by = "deva"
+    rg = "res-tf-useast1-rg-01"
   }
 }
 
@@ -47,6 +30,7 @@ resource "aws_vpc" "vpc" {
   tags = {
     created_by = "deva"
     name = "res-vpc-01"
+    rg = "res-tf-useast1-rg-01"
   }
 }
 
@@ -56,6 +40,7 @@ resource "aws_subnet" "sub1" {
 
   tags = {
     created_by = "deva"
-    name = "res-vpc-sub-01"
+    name = "res-vpc-01-sub-01"
+    rg = "res-tf-useast1-rg-01"
   }
 }
