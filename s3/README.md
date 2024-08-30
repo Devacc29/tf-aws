@@ -15,6 +15,6 @@ Default output format [None]: <br/>
 Run the terraform.sh file <br/>
 
 cd to the s3 folder <br/>
-chmod +x terraform.s <br/>
+chmod +x terraform.sh <br/>
 ./terraform.sh
 
