@@ -4,7 +4,7 @@ on:  #workflow_dispatch
     branches:
     - main
     paths:
-    - terraform/**
+    - terraform/AWS/**
 #  pull_request:
 #    branches:
 #    - main
@@ -28,7 +28,7 @@ jobs:
      run:
        shell: bash
        # We keep Terraform files in the terraform directory.
-       working-directory: ./terraform
+       working-directory: ./terraform/AWS
  
    steps:
      - name: Checkout the repository to the runner

@@ -13,11 +13,16 @@ terraform {
   }
   backend "s3" {
     region = "us-east-1"
-    key = "terraform.tfstate"
+    key = "vpc.tfstate"
   }
 }
 
 # Configure the AWS Provider
 provider "aws" {
   region = "us-east-1"
+}
+
+provider "aws" {
+  region = "us-west-1"
+  alias = "west"
 }

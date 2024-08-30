@@ -1,11 +1,10 @@
 resource "random_string" "str" {
-  length  = 12
+  length  = 5
   upper   = false
   special = false
 
   lifecycle {
     ignore_changes = [
-      length,
       upper,
       special
     ]
@@ -14,8 +13,6 @@ resource "random_string" "str" {
 
 # Resource Block: Create AWS S3 Bucket
 resource "aws_s3_bucket" "tfs3" {
-  bucket = random_string.str.id
-  tags = {
-    created_by = "deva"
-  }
+  bucket = "${var.s3_name}-${random_string.str.id}"
+  tags   = var.tags
 }
