@@ -9,8 +9,12 @@ resource "aws_resourcegroups_group" "rg" {
   ],
   "TagFilters": [
     {
-      "Key": "created_by", "rg"
-      "Values": ["deva", "res-tf-useast1-rg-01"]
+      "Key": "created_by"
+      "Values": ["deva"]
+    }
+    {
+      "Key": "rg"
+      "Values": ["res-tf-useast1-rg-01"]
     }
   ]
 }
