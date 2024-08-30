@@ -11,10 +11,6 @@ resource "aws_resourcegroups_group" "rg" {
     {
       "Key": "created_by"
       "Values": ["deva"]
-    },
-    {
-      "Key": "rg"
-      "Values": ["res-tf-useast1-rg-01"]
     }
   ]
 }
